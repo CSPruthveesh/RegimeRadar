@@ -1,48 +1,53 @@
 # RegimeRadar
-#Week 1: Financial Data Feature Engineering & Visualization
+# Financial Data Analysis & Feature Engineering – Progress Summary
 
 ## Overview
 
-This week marked the foundation of my data analytics journey, where I learned to work with Python libraries such as:
-
-- **NumPy**
-- **Pandas**
-- **Matplotlib**
-
-The focus was on handling real-world financial data, extracting insights from order book and trade data, and building visual indicators for market analysis.
+This project is part of my ongoing learning in financial data analytics, with a focus on order book and trade data. The work is divided into weekly milestones to progressively build skills in data handling, feature engineering, and market indicator visualization.
 
 ---
 
-## 📁 Datasets Used
+## 📅 Weekly Progress
 
-1. **depth20.csv** – Contains top 20 bid/ask price levels from the order book (Level 2 data).
-2. **aggTrade.csv** – Contains aggregated executed trades (tick-by-tick trade history).
+### ✅ Week 1: Learning Core Python Libraries
+
+During the first week, I focused on building foundational skills with the following Python libraries:
+
+- **NumPy** – for numerical computations and array operations
+- **Pandas** – for data manipulation and analysis
+- **Matplotlib** – for basic data visualization
+
+These tools form the base for working with structured financial datasets, especially time-series data like order books and trades.
 
 ---
 
-## ✅ Key Skills Gained
+### ✅ Week 2: Financial Feature Engineering & Visualization
 
-### 📊 Data Manipulation
-- Extracted and processed structured financial data using **Pandas**.
-- Handled timestamps, price-volume arrays, and calculated derived columns.
+In Week 2, I applied the knowledge gained to real financial datasets:
 
-### ⚙️ Feature Engineering
-Computed essential market indicators such as:
+#### 📁 Datasets Used
+1. **depth20.csv** – Contains snapshots of the top 20 bid and ask price levels (Level 2 order book).
+2. **aggTrade.csv** – Contains aggregated trade data (executed market orders).
+
+#### 🛠 Feature Engineering Performed
 - **Spread** = Best Ask - Best Bid
 - **Mid Price** = (Best Ask + Best Bid) / 2
 - **Order Book Imbalance** = (Sum of Bid Volumes - Sum of Ask Volumes) / (Sum of Bid Volumes + Sum of Ask Volumes)
-- **Rolling Volatility** using rolling standard deviation of mid-price returns
+- **Rolling Volatility** = Standard deviation of mid-price returns over a rolling window
 
-### 📈 Visualization
-- Created time-series plots to visualize changes in spread, mid price, and volatility.
-- Plotted imbalance heatmaps and volatility overlays using **Matplotlib**.
-
----
-
-## 🧠 Learnings
-
-- Understood how to represent market microstructure using order book data.
-- Gained experience transforming raw tick data into meaningful indicators.
-- Reinforced the importance of **data cleaning**, **window-based operations**, and **normalization** in financial data science.
+#### 📈 Visualizations Created
+- Time-series plots for spread, mid price, and volatility
+- Order book imbalance trends
+- Rolling metrics visualizations using **Matplotlib**
 
 ---
+
+## 🧠 Key Learnings
+
+- Developed the ability to extract and clean real-time financial data
+- Created market structure indicators from raw order book and trade data
+- Visualized high-frequency indicators to understand short-term market behavior
+
+
+
+> This README summarizes progress up to Week 2. The upcoming weeks will focus on applying machine learning techniques for pattern discovery in market microstructure data.
