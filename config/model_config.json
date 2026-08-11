@@ -1,0 +1,27 @@
+{
+  "gmm": {
+    "n_components": 4,
+    "covariance_type": "diag",
+    "random_state": 42
+  },
+  "scaling": {
+    "lookback_seconds": 3600,
+    "min_periods": 100
+  },
+  "features": [
+    "price_var",
+    "avg_time_diff",
+    "value_per_second",
+    "volatility_10s",
+    "volatility_30s",
+    "vwap_10s",
+    "vwap_30s",
+    "weighted_obi_5",
+    "weighted_obi_10",
+    "weighted_obi_20",
+    "bid_ask_spread",
+    "micro_price",
+    "squared_log_return_var_10s",
+    "squared_log_return_var_30s"
+  ]
+}

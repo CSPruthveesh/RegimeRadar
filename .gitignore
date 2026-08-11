@@ -1,0 +1,25 @@
+# Ignore large HFT datasets
+data/raw/
+data/processed/
+*.csv
+*.zip
+*.rar
+depth20_1000ms/
+aggTrade/
+
+# Ignore Python runtime files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore MLOps logs and runs
+mlruns/
+.mlruns/
+*.log
+
+# Ignore local system files
+.DS_Store
+Thumbs.db
