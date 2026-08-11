@@ -4,7 +4,7 @@ RegimeRadar is a high-frequency trading (HFT) analytics and machine learning pip
 
 ---
 
-## 📂 Repository Architecture
+## Repository Architecture
 
 ```filepath
 ├── config/
@@ -28,7 +28,7 @@ RegimeRadar is a high-frequency trading (HFT) analytics and machine learning pip
 
 ---
 
-## 🛠️ Operational Workflow & Roadmap
+## Operational Workflow & Roadmap
 
 ```mermaid
 graph TD
@@ -47,7 +47,7 @@ graph TD
 
 ---
 
-## 📈 Microstructure Feature Engineering
+## Microstructure Feature Engineering
 
 The pipeline engineers features directly reflecting order book dynamics:
 
@@ -68,7 +68,7 @@ The pipeline engineers features directly reflecting order book dynamics:
 
 ---
 
-## 🤖 Unsupervised Probabilistic Modeling & MLOps
+## Unsupervised Probabilistic Modeling & MLOps
 
 1. **Gaussian Mixture Model (GMM)**:
    Upgraded from hard-boundary KMeans to GMM (`n_components=4`, `covariance_type='diag'`) to model soft, probabilistic memberships for market states, capturing regime transition uncertainty.
@@ -84,7 +84,7 @@ The pipeline engineers features directly reflecting order book dynamics:
 
 ---
 
-## 📊 Strategy Backtesting Metrics
+## Strategy Backtesting Metrics
 
 The model maps GMM clusters to directional long/short execution signals. On the local training dataset, the regime-based strategy yields:
 - **Annualized Sharpe Ratio**: `8.16`
@@ -93,7 +93,7 @@ The model maps GMM clusters to directional long/short execution signals. On the 
 
 ---
 
-## ⚡ Execution Instructions
+## Execution Instructions
 
 ### Running the Live Ingestion Client
 To connect to the live Binance BNBUSDT exchange WebSocket feed and calculate microstructure features:
