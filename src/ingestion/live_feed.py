@@ -55,5 +55,4 @@ async def binance_book_ticker_feed(symbol="bnbusdt"):
 
 if __name__ == "__main__":
     # Run the client in the asyncio loop
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(binance_book_ticker_feed())
+    asyncio.run(binance_book_ticker_feed())
