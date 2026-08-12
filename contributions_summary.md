@@ -49,8 +49,12 @@ Leveraged a decoupled architecture featuring a live asynchronous WebSocket inges
 ---
 
 ## 4. Master Resume Section (Best-Curated Quant Bullet Points)
-- **Spearheaded** the engineering of **RegimeRadar**, a production-ready market regime detection pipeline that processes **1.27M+** ticks, achieving a GMM-regime-driven strategy with a **8.16 Sharpe Ratio**, **-2.60% Max Drawdown**, and **68.67 Calmar Ratio** on historical order book logs.
+- **Spearheaded** the engineering of **RegimeRadar**, a production-ready market regime detection pipeline that processes **1.27M+** ticks, achieving a GMM-regime-driven strategy with an annualized **8.16 Sharpe Ratio**, **-2.60% Max Drawdown**, and **68.67 Calmar Ratio** on historical order book logs.
 - **Optimized** data cleaning and ingestion performance by designing timezone-aware vectorized parsing, reducing timezone parsing latency by **65%** and achieving a **75%** increase in processing throughput.
 - **Eliminated** parameter and look-ahead database leakages by architecting a causal asynchronous merging module (`pd.merge_asof`) and a rolling Z-score feature scaling window (3600s).
 - **Deployed** an asynchronous live WebSocket ingestion client for Binance streaming L2 depth data, enabling real-time microstructure feature extraction (OBI, Spread, Micro-Price) under **<1ms** latency.
+- **Replaced** hard-margin KMeans clustering with a **4-component Gaussian Mixture Model (GMM)** to compute soft state membership probabilities, successfully capturing regime transition boundaries and mitigating signal noise in high-volatility environments.
+- **Validated** regime classifier stability across temporal slices by implementing a **5-fold purged Time-Series Cross Validation (TSCV)** scheme, ensuring GMM log-likelihood scoring and out-of-sample signal generation are robust to structural market breaks.
+- **Formulated** a **Markovian regime transition probability matrix** to quantify state persistency and shifting thresholds, reducing false execution signals during highly volatile, transient market phases.
+- **Decoupled** model configurations from processing logic via a modular JSON system and developed an automated regression test suite using `unittest`, safeguarding the mathematical accuracy of real-time OBI decay weights and micro-price VWAP logic.
 - **Orchestrated** the migration of quantitative research scripts into a production-grade codebase structure (`config/`, `src/`, `tests/`), raising overall code capability and architecture quality by **25%**.
