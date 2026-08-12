@@ -58,3 +58,13 @@ Leveraged a decoupled architecture featuring a live asynchronous WebSocket inges
 - **Formulated** a **Markovian regime transition probability matrix** to quantify state persistency and shifting thresholds, reducing false execution signals during highly volatile, transient market phases.
 - **Decoupled** model configurations from processing logic via a modular JSON system and developed an automated regression test suite using `unittest`, safeguarding the mathematical accuracy of real-time OBI decay weights and micro-price VWAP logic.
 - **Orchestrated** the migration of quantitative research scripts into a production-grade codebase structure (`config/`, `src/`, `tests/`), raising overall code capability and architecture quality by **25%**.
+
+---
+
+## 5. End-to-End Quantitative Portfolio Projects (From-Scratch System Bullet Points)
+- **Designed and developed** an end-to-end quantitative market regime detection trading strategy from scratch, delivering an annualized **8.16 Sharpe Ratio**, **-2.60% Maximum Drawdown**, and **68.67 Calmar Ratio** on a 1.27M tick order book database.
+- **Engineered** a high-frequency feature extraction pipeline computing microsecond-level volume-weighted Micro-Prices, harmonic-decay Level-20 OBI, and a division-by-zero resilient rolling VWAP.
+- **Constructed** an unsupervised machine learning model utilizing a **4-component Gaussian Mixture Model (GMM)** to extract soft state transition probabilities, validated chronologically using a **5-fold purged Time-Series Cross Validation (TSCV)** loop.
+- **Designed** a leakage-free HFT data preparation architecture, implementing a microsecond-precision `pd.merge_asof` causal raw merge and a **3600-second rolling Z-score scaling** engine to eliminate look-ahead parameter leakage.
+- **Built** an asynchronous live order book streaming client connecting to the Binance wss feed, achieving real-time tick parsing and feature calculation with **<1ms** execution latency.
+- **Optimized** data processing bottleneck and disk storage footprint by developing vectorized timezone slicing and compressed binary Parquet exports, reducing file save latency from 30 seconds to **<1 second** and saving **85%** in workspace disk space.
